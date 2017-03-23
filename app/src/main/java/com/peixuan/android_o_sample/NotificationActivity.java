@@ -25,7 +25,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         CharSequence name = "channel_name";
 
-        int importance = NotificationManager.IMPORTANCE_LOW;
+        int importance = NotificationManager.IMPORTANCE_MAX;
 
         //only compile in android-o
         NotificationChannel mChannel = new NotificationChannel(id, name, importance);
@@ -35,12 +35,14 @@ public class NotificationActivity extends AppCompatActivity {
         mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
         notificationManager.createNotificationChannel(mChannel);
 
-        
         Notification notification = new Notification.Builder(NotificationActivity.this
         ).setContentTitle("New Message")
                 .setContentText("You've received new messages.")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setChannel(id)
+                .setColor(Color.BLUE) //setbbackgroundcolor
+                .setColorized(true)
+//                .setStyle(new Notification.MessagingStyle(getResources().getString(R.string.app_name)).addMessage("1",300, name).addMessage("2", 400, name))
                 .build();
         notificationManager.notify(1, notification);
     }

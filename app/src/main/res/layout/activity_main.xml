@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.peixuan.android_o_sample.MainActivity">
 
     <Button
@@ -13,6 +14,29 @@
         android:text="Notification"
         android:textStyle="normal"
         />
+    <Button
+        android:id="@+id/btn_autofill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autofill Framework"
+        android:textStyle="normal"
+        />
+    <Button
+        android:id="@+id/btn_pip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Picture-in-Picture mode"
+        android:textStyle="normal"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_fonts"
+        android:text="Working with fonts"
+        android:textStyle="normal"
+        />
+
+
 
 
 
